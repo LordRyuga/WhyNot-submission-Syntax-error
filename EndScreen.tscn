@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://bq1dnudkqy7wq"]
+
+[ext_resource type="Script" path="res://label.gd" id="1_del8n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bi6mr"]
+bg_color = Color(0.576471, 0.576471, 0.576471, 0.733333)
+
+[node name="Label" type="Label"]
+offset_left = -228.0
+offset_top = -116.0
+offset_right = -188.0
+offset_bottom = -93.0
+scale = Vector2(5.70008, 4.2266)
+script = ExtResource("1_del8n")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(27.0172, 18.6912)
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = -56.315
+offset_top = -41.641
+offset_right = 54.685
+offset_bottom = -10.641
+scale = Vector2(0.456452, 0.736364)
+theme_override_styles/hover = SubResource("StyleBoxFlat_bi6mr")
+text = "Home Screen"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,90 @@
+[gd_scene load_steps=6 format=3 uid="uid://6itj20dj3lht"]
+
+[ext_resource type="Script" path="res://controls.gd" id="1_mpdxn"]
+[ext_resource type="FontFile" uid="uid://cqcu8q8tr7i3" path="res://Assets/Sprites/Popcat.otf" id="1_t4idm"]
+[ext_resource type="Texture2D" uid="uid://b35r5ke0yjk7v" path="res://Assets/Sprites/southwest-landscape-digital-art.jpg" id="2_u7abn"]
+[ext_resource type="Texture2D" uid="uid://bdian0738qtpc" path="res://Assets/Sprites/back-back-back-back_-jurassic-1.png" id="3_jvyun"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r8e3o"]
+texture = ExtResource("2_u7abn")
+modulate_color = Color(1, 1, 1, 0.552941)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_mpdxn")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0625
+anchor_top = 0.00925926
+anchor_right = 0.0815972
+anchor_bottom = 0.320988
+offset_left = 6.0
+offset_right = 1152.0
+offset_bottom = 653.0
+scale = Vector2(0.866279, 0.751937)
+theme_override_fonts/font = ExtResource("1_t4idm")
+theme_override_font_sizes/font_size = 60
+text = "Player 1
+A: Move Right
+D: Move Left
+W: Jump
+Mouse Right: Shoot
+
+player 2
+right joystick  = aim
+left joystick l and r to move
+lb = boost
+rb = shoot
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(575, 328)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.925
+anchor_bottom = 0.867
+offset_left = -5.99998
+offset_top = 7.00001
+offset_right = -1066.6
+offset_bottom = -548.816
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(234.259, 107.562)
+theme_override_styles/panel = SubResource("StyleBoxTexture_r8e3o")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -557.0
+offset_top = -637.0
+offset_right = -421.0
+offset_bottom = -501.0
+grow_horizontal = 2
+grow_vertical = 0
+icon = ExtResource("3_jvyun")
+flat = true
+vertical_icon_alignment = 0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

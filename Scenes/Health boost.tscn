@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwxj6c5p3sbq0"]
+
+[ext_resource type="Script" path="res://Scripts/health_boost.gd" id="1_0urmm"]
+[ext_resource type="Texture2D" uid="uid://do8f5mrbdhpes" path="res://Assets/Sprites/Special_Health_Regen-removebg-preview.png" id="2_ferrx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3wouh"]
+radius = 92.0
+height = 184.0
+
+[node name="Health" type="Area2D"]
+scale = Vector2(0.1416, 0.134593)
+collision_mask = 3
+script = ExtResource("1_0urmm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ferrx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_3wouh")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

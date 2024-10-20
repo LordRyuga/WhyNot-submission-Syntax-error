@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0raajamjnb0m"]
+
+[ext_resource type="PackedScene" uid="uid://dujt5rpkrbdqk" path="res://Scenes/Map_Ishaan.tscn" id="1_7c8i3"]
+[ext_resource type="PackedScene" uid="uid://ctd1c6heqcctd" path="res://Scenes/player_spawner.tscn" id="3_t6ioj"]
+
+[node name="Main" type="Node2D"]
+
+[node name="MapIshaan" parent="." instance=ExtResource("1_7c8i3")]
+
+[node name="Player" type="Node2D" parent="."]
+
+[node name="PlayerSpawner" parent="." instance=ExtResource("3_t6ioj")]
+position = Vector2(-202, -55)
+
+[node name="PlayerSpawner2" parent="." instance=ExtResource("3_t6ioj")]
+position = Vector2(-47, -87)

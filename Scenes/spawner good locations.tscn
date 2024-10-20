@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwit2tat7ojcf"]
+
+[ext_resource type="PackedScene" uid="uid://ctd1c6heqcctd" path="res://Scenes/player_spawner.tscn" id="1_rs22r"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="spawn1" parent="." instance=ExtResource("1_rs22r")]
+position = Vector2(25, 1208)
+
+[node name="spawn2" parent="." instance=ExtResource("1_rs22r")]
+position = Vector2(-126, 2150)
+
+[node name="spawn3" parent="." instance=ExtResource("1_rs22r")]
+position = Vector2(3019, 2066)
+
+[node name="spawn4" parent="." instance=ExtResource("1_rs22r")]
+position = Vector2(1024, 2685)
+
+[node name="spawn5" parent="." instance=ExtResource("1_rs22r")]
+position = Vector2(3207, 1047)
+
+[node name="spawn6" parent="." instance=ExtResource("1_rs22r")]
+position = Vector2(2258, 357)
+
+[node name="spawn7" parent="." instance=ExtResource("1_rs22r")]
+position = Vector2(-648, 424)

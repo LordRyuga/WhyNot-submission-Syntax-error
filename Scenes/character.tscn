@@ -1,0 +1,92 @@
+[gd_scene load_steps=10 format=3 uid="uid://21ndts48jg01"]
+
+[ext_resource type="Script" path="res://Scripts/character.gd" id="1_1miph"]
+[ext_resource type="Texture2D" uid="uid://rpvyqk7y3u81" path="res://Assets/Sprites/PNG/shipBlue_manned.png" id="2_7mh74"]
+[ext_resource type="Script" path="res://Scenes/deathsp1.gd" id="3_10kes"]
+[ext_resource type="Script" path="res://Scenes/wlp1.gd" id="4_g5akf"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_swfip"]
+radius = 14.0
+height = 32.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pkjt7"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w0ib7"]
+bg_color = Color(0.428548, 0.667595, 0.460367, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0vesk"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r3qc1"]
+bg_color = Color(0.331003, 0.615753, 0.916655, 1)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+scale = Vector2(2.13, 2.13)
+collision_layer = 3
+script = ExtResource("1_1miph")
+
+[node name="waitbeforejump" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_swfip")
+
+[node name="exitFlight" type="Timer" parent="."]
+wait_time = 0.6
+
+[node name="enterFlight" type="Timer" parent="."]
+wait_time = 0.291
+
+[node name="ShipBlueManned" type="Sprite2D" parent="."]
+scale = Vector2(0.258064, 0.193548)
+texture = ExtResource("2_7mh74")
+
+[node name="Shooting point" type="Marker2D" parent="ShipBlueManned"]
+position = Vector2(58.125, 0)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)
+
+[node name="Health" type="ProgressBar" parent="."]
+offset_left = -19.0
+offset_top = -28.0
+offset_right = 21.0
+offset_bottom = -23.0
+theme_override_styles/background = SubResource("StyleBoxFlat_pkjt7")
+theme_override_styles/fill = SubResource("StyleBoxFlat_w0ib7")
+value = 60.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Boost" type="ProgressBar" parent="."]
+offset_left = -19.0
+offset_top = -21.0
+offset_right = 21.0
+offset_bottom = -16.0
+theme_override_styles/background = SubResource("StyleBoxFlat_0vesk")
+theme_override_styles/fill = SubResource("StyleBoxFlat_r3qc1")
+value = 60.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = -19.0
+offset_top = -43.0
+offset_right = 21.0
+offset_bottom = -20.0
+scale = Vector2(1, 0.5)
+script = ExtResource("3_10kes")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -170.0
+offset_top = -129.0
+offset_right = -130.0
+offset_bottom = -106.0
+scale = Vector2(4.43098, 4.29922)
+script = ExtResource("4_g5akf")
+
+[connection signal="timeout" from="waitbeforejump" to="." method="_on_waitbeforejump_timeout"]
+[connection signal="timeout" from="exitFlight" to="." method="_on_exit_flight_timeout"]
+[connection signal="timeout" from="enterFlight" to="." method="_on_enter_flight_timeout"]

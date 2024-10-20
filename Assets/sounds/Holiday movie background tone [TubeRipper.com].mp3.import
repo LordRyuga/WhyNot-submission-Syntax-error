@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dn8n8ve0gcij8"
+path="res://.godot/imported/Holiday movie background tone [TubeRipper.com].mp3-4b953131c1731a68d21f615a49a5ef6e.mp3str"
+
+[deps]
+
+source_file="res://Assets/sounds/Holiday movie background tone [TubeRipper.com].mp3"
+dest_files=["res://.godot/imported/Holiday movie background tone [TubeRipper.com].mp3-4b953131c1731a68d21f615a49a5ef6e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
