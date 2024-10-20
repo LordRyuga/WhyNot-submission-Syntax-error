@@ -87,6 +87,10 @@ offset_bottom = -106.0
 scale = Vector2(4.43098, 4.29922)
 script = ExtResource("4_g5akf")
 
+[node name="Timer" type="Timer" parent="Label2"]
+one_shot = true
+
 [connection signal="timeout" from="waitbeforejump" to="." method="_on_waitbeforejump_timeout"]
 [connection signal="timeout" from="exitFlight" to="." method="_on_exit_flight_timeout"]
 [connection signal="timeout" from="enterFlight" to="." method="_on_enter_flight_timeout"]
+[connection signal="timeout" from="Label2/Timer" to="Label2" method="_on_timer_timeout"]

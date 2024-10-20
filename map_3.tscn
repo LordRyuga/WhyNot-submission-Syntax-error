@@ -518,6 +518,7 @@ offset_top = 1840.0
 offset_right = 1845.0
 offset_bottom = 2348.0
 scale = Vector2(0.277306, 0.250207)
+focus_mode = 0
 icon = ExtResource("10_475ru")
 icon_alignment = 1
 

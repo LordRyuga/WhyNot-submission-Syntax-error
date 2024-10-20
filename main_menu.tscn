@@ -146,7 +146,7 @@ vertical_alignment = 1
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_cbdwk")
-volume_db = -16.0
+volume_db = 16.469
 autoplay = true
 playback_type = 1
 parameters/looping = true

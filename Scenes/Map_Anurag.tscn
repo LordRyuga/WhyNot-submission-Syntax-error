@@ -518,6 +518,7 @@ offset_top = 467.0
 offset_right = 4176.0
 offset_bottom = 975.0
 scale = Vector2(0.277306, 0.250207)
+focus_mode = 0
 icon = ExtResource("10_1csbx")
 icon_alignment = 1
 

@@ -517,6 +517,7 @@ offset_top = 626.0
 offset_right = 1833.0
 offset_bottom = 1134.0
 scale = Vector2(0.277306, 0.250207)
+focus_mode = 0
 icon = ExtResource("9_a5cka")
 icon_alignment = 1
 

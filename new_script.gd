@@ -22,8 +22,6 @@ var fuel = Boost_time
 func _is_on_ground() -> bool:
 	return is_on_floor()
 
-@onready var p2death: Node2D = get_node("res://Scenes/spawner2.tscn")
-@onready var text_edit: TextEdit = $TextEdit
 
 @onready var boostBar: ProgressBar = $Boost
 @onready var waitbeforejump: Timer = $waitbeforejump

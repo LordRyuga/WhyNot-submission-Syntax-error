@@ -4,8 +4,7 @@ var respawntime = 5.0
 var player_scene = preload("res://Scenes/PLAYER 2.tscn")
 var player = null
 var displayDeath
-@onready var text_edit: TextEdit = $TextEdit
-@onready var char: = get_node("res://Scenes/PLAYER 2.tscn")
+
 #var deaths2 = 0
 
 func _ready() -> void:
